@@ -11,6 +11,7 @@ import { Chart } from '../../../components/chart'
 import moment from 'moment'
 import { useState } from 'react'
 import { Input } from '../../../components/shared/input'
+import Skeleton from 'react-loading-skeleton'
 
 export function HomePage() {
   const [search, setSearch] = useState('')
@@ -79,6 +80,11 @@ export function HomePage() {
           {financeStatus && (
             <StocksCard data={financeStatus?.data.data.results.stocks} />
           )}
+          {!financeStatus && (
+            <div className="p-10">
+              <Skeleton count={15} />
+            </div>
+          )}
         </div>
 
         <div className="card glass">
@@ -87,14 +93,19 @@ export function HomePage() {
               data={financeStatus?.data.data.results.currencies}
             />
           )}
-        </div>
-
-        <div className="card glass relative overflow-clip">
-          <div className="bg-pattern" />
-          {financeStatus && (
-            <TaxesCard data={financeStatus?.data.data.results.taxes} />
+          {!financeStatus && (
+            <div className="p-10">
+              <Skeleton count={15} />
+            </div>
           )}
         </div>
+
+        {financeStatus && (
+          <div className="card glass relative overflow-clip">
+            <div className="bg-pattern" />
+            <TaxesCard data={financeStatus?.data.data.results.taxes} />
+          </div>
+        )}
       </div>
 
       <div className="card bg-amber-400 relative mb-10 flex items-center border-none">
@@ -124,7 +135,7 @@ export function HomePage() {
 
             {!selectedSymbol && (
               <p className="text-center text-slate-400">
-                Selecione uma ação para ver o gráfico
+                Selecione um ativo ao lado para ver o gráfico
               </p>
             )}
           </article>
