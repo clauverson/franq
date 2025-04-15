@@ -31,3 +31,14 @@ yarn dev
 ```
 
 A aplicação estará disponível em `http://localhost:5173`
+
+📸 Abaixo alguns prints da interface desenvolvida durante o desafio:
+
+Dashboard
+![screencapture-localhost-5173-2025-04-14-23_38_25](https://github.com/user-attachments/assets/376b8d9b-ca56-4ffd-a806-7735025433f9)
+
+BTC
+![screencapture-localhost-5173-2025-04-14-23_38_25 copy](https://github.com/user-attachments/assets/38d523cb-9052-455e-96f7-3a4f1be19d34)
+
+Gráficos
+![screencapture-localhost-5173-2025-04-14-23_41_56](https://github.com/user-attachments/assets/6ac05efe-c6c3-4fad-8c6b-c459463f9e7b)
