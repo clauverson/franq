@@ -25,6 +25,34 @@
     );
   }
 
+  .auth-bg-pattern {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #e5e5f7;
+    opacity: 0.3;
+    background: radial-gradient(
+        circle,
+        transparent 20%,
+        #e5e5f7 20%,
+        #e5e5f7 80%,
+        transparent 80%,
+        transparent
+      ),
+      radial-gradient(
+          circle,
+          transparent 20%,
+          #e5e5f7 20%,
+          #e5e5f7 80%,
+          transparent 80%,
+          transparent
+        )
+        25px 25px,
+      linear-gradient(#b7b7b7 2px, transparent 2px) 0 -1px,
+      linear-gradient(90deg, #b7b7b7 2px, #e5e5f7 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  }
+
   .glass {
     backdrop-filter: blur(10px);
   }

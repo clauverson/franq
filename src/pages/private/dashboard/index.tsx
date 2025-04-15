@@ -10,6 +10,7 @@ import { QuotationsService } from '../../../services/quotations'
 import { Chart } from '../../../components/chart'
 import moment from 'moment'
 import { useState } from 'react'
+import { Input } from '../../../components/shared/input'
 
 export function HomePage() {
   const [search, setSearch] = useState('')
@@ -130,12 +131,8 @@ export function HomePage() {
 
           <aside className="card glass h-[30rem] overflow-y-auto">
             <header className="sticky top-0 bg-slate-100 py-4 px-10">
-              <input
+              <Input
                 type="text"
-                className={twMerge(
-                  'bg-slate-200 p-2 rounded outline-0 px-4 w-full',
-                  'focus:ring-2 focus:ring-teal-600'
-                )}
                 placeholder="Buscar cotação"
                 onChange={searchQuotation}
               />
