@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@layer components {
+  .card {
+    @apply bg-slate-300/20 min-h-30 rounded-lg border border-slate-200;
+  }
+
+  .card-title {
+    @apply text-center uppercase font-bold;
+  }
+
+  .bg-pattern {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #e5e5f7;
+    opacity: 0.1;
+    background-size: 16px 16px;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #b9b9b9 0,
+      #b9b9b9 1.6px,
+      #e5e5f7 0,
+      #e5e5f7 50%
+    );
+  }
+
+  .glass {
+    backdrop-filter: blur(10px);
+  }
+}
