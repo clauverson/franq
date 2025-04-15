@@ -28,7 +28,7 @@ export function LoginPage() {
 
   return (
     <main className="grid">
-      <header className="mb-8 grid gap-4">
+      <header className="mb-4 grid gap-4">
         <img src={logo} alt="Logo" className="w-48 mx-auto" draggable={false} />
         <h4 className="text-center">Acesse sua conta</h4>
       </header>
@@ -57,6 +57,12 @@ export function LoginPage() {
             onChange={form.handleChange}
           />
         </div>
+
+        {form.errors.email && (
+          <span className="text-sm py-2 text-rose-800 bg-rose-100 rounded-lg text-center">
+            {form.errors.email}
+          </span>
+        )}
 
         <footer className="mt-6 text-center">
           <Button type="submit">Entrar</Button>

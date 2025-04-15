@@ -66,6 +66,12 @@ export function SignUpPage() {
           />
         </div>
 
+        {form.errors.email && (
+          <span className="text-sm py-2 text-rose-800 bg-rose-100 rounded-lg text-center">
+            {form.errors.email}
+          </span>
+        )}
+
         <footer className="mt-6 text-center">
           <Button type="submit">Enviar</Button>
 
