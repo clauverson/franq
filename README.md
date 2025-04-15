@@ -7,8 +7,7 @@ Este projeto utiliza **React + Vite** como base.
 ### 1. Clonar o repositório
 
 ```bash
-git clone <url-do-repo>
-cd <nome-do-repo>
+git clone https://github.com/clauverson/franq
 ```
 
 ### 2. Instalar as dependências
